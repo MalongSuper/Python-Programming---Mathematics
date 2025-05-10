@@ -215,4 +215,5 @@ def main():
     print(ip_address.ValidAddressesRange)
 
 
-main()
+if __name__ == "__main__":
+    main()
