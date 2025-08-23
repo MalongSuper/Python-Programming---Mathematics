@@ -12,4 +12,5 @@ for i in range(size):
 matrix = np.array(values).reshape(size, size)
 # Calculate eigenvalues and eigenvectors
 eig_val, eig_vec = np.linalg.eig(matrix)
-print(eig_val, eig_vec)
+print("Eigenvalues: ", eig_val)
+print("Eigenvectors:", eig_vec)
