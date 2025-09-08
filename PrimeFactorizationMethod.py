@@ -1,5 +1,5 @@
 # Prime Factorization Method for Greatest Common Divisor
-# For two integers
+# For three integers
 from math import sqrt
 
 
@@ -26,19 +26,22 @@ def prime_factors(n):  # Find all the prime factors of the numbers
 print("Greatest Common Divisor - Prime Factorization Method")
 a = int(input("Enter first integer: "))
 b = int(input("Enter second integer: "))
+c = int(input("Enter third integer: "))
 # Find all similar prime factors, including duplicate
-pa, pb = prime_factors(a), prime_factors(b)  # Return as a list
+pa, pb, pc = prime_factors(a), prime_factors(b), prime_factors(c)
+# Return as a list
 print("Prime Factors of", a, "are", pa)
 print("Prime Factors of", b, "are", pb)
+print("Prime Factors of", c, "are", pc)
 # Step 1: Find the factors that are common in both lists
 # By intersection
-common_factors = list(set(pa) & set(pb))
+common_factors = list(set(pa) & set(pb) & set(pc))
 print("Common Factors", common_factors)
 # Step 2: Find the occurrence of each of the common factors
 # In both lists, and then takes the minimum one
 # Use the values to power the common factors
 gcd = 1
 for c in common_factors:
-    gcd *= c ** min(pa.count(c), pb.count(c))
+    gcd *= c ** min(pa.count(c), pb.count(c), pc.count(c))
 
 print("GCD is", gcd)
