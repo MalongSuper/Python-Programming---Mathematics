@@ -47,13 +47,7 @@ def main():
         max_digits = 4
 
     result = find_A(target, max_digits)
-
-    # If A = 1 -> 1 + 11 + 111 + 1111 = 1234
-    # Might also mean no solution
-    if result == 1 and target != 1 + 11 + 111 + 1111:
-        print("No solution found")
-    else:
-        print("A is:", result)
-
+    print(f"The value of A is: {result}")
     
+        
 main()
