@@ -47,7 +47,14 @@ def main():
         max_digits = 4
 
     result = find_A(target, max_digits)
-    print(f"The value of A is: {result}")
-    
-        
+
+    # A = 1, max_digits = 4 means 1 + 11 + 111 + 1111 = 1234
+    # Also means no solution for the input number
+    if result == 1 and sum(int(str(1) * j) for j 
+                           in range(1, max_digits + 1)) != target:
+        print("No solution found")
+    else:
+        print(f"The value of A is: {result}")
+
+
 main()
