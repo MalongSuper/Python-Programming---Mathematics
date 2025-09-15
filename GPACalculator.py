@@ -44,13 +44,13 @@ class Course:
         # If points >= 5.0 --> C
         # If points >= 3.5 --> D
         # If points < 3.5 --> F
-        if self.__points >= 8.0:
+        if self.__points >= 8.5:
             return "A", 4.0
-        elif self.__points >= 6.5:
+        elif self.__points >= 7.0:
             return "B", 3.0
-        elif self.__points >= 5.0:
+        elif self.__points >= 5.5:
             return "C", 2.0
-        elif self.__points >= 3.5:
+        elif self.__points >= 4.0:
             return "D", 1.0
         else:
             return "F", 0.0
